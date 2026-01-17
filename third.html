@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>আমার সম্পর্কে ও ধন্যবাদ</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f2f2f2;
+    overflow-x:hidden;
+}
+
+/* সব সেকশন */
+.section{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+/* কার্ড ডিজাইন */
+.card{
+    background:white;
+    width:90%;
+    max-width:400px;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.25);
+    text-align:center;
+}
+
+/* প্রথম কার্ড এনিমেশন */
+.about-card{
+    animation: slideFade 1.4s ease forwards;
+}
+
+/* ধন্যবাদ সেকশন */
+.thankyou-section{
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+}
+
+/* ধন্যবাদ কার্ড এনিমেশন */
+.thank-card{
+    animation: zoomFade 1.5s ease forwards;
+}
+
+/* টেক্সট এনিমেশন */
+.card h1, .card h2, .card h3, .card p{
+    animation: textFade 1.2s ease forwards;
+}
+
+/* বাটন */
+button{
+    margin-top:20px;
+    background:#4CAF50;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+    transition:transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* এনিমেশন কিফ্রেম */
+@keyframes slideFade{
+    from{
+        opacity:0;
+        transform:translateY(60px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes zoomFade{
+    from{
+        opacity:0;
+        transform:scale(0.7);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@keyframes textFade{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+h1,h2{
+    color:#2e7d32;
+}
+
+p{
+    font-size:16px;
+    color:#555;
+}
+</style>
+</head>
+
+<body>
+
+<!-- প্রথম অংশ : আমার সম্পর্কে -->
+<div class="section">
+    <div class="card about-card">
+        <h2>🙋‍♂️ আমার সম্পর্কে</h2>
+        <p><b>নাম:</b> আপনার নাম</p>
+        <p><b>পেশা:</b> ওয়েবসাইট ডেভেলপার</p>
+        <p><b>শখ:</b> কোডিং, ডিজাইন</p>
+        <p><b>লক্ষ্য:</b> একজন অধ্যাপক হওয়া</p>
+
+        <hr>
+
+        <h3>📞 যোগাযোগ</h3>
+        <p>মোবাইল: 01XXXXXXXXX</p>
+        <p>ফেইসবুক: facebook.com/yourid</p>
+        <p>ইমেইল: example@gmail.com</p>
+
+        <p style="margin-top:20px;color:#777;">
+            ⬇ নিচে স্ক্রল করুন
+        </p>
+    </div>
+</div>
+
+<!-- দ্বিতীয় অংশ : ধন্যবাদ -->
+<div class="section thankyou-section">
+    <div class="card thank-card">
+        <h1>🙏 ধন্যবাদ</h1>
+        <p>আমার ওয়েবসাইট ভিজিট করার জন্য আপনাকে অসংখ্য ধন্যবাদ।</p>
+        <p>আবার আসবেন 😊</p>
+
+        <button onclick="location.href='নুর2.html'">
+            প্রথম পেইজে যান 🔁
+        </button>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>আমার পরিচয়</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:60px 0 30px;
+}
+
+/* প্রোফাইল ছবি */
+.profile-pic{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:5px solid white;
+    background:url('0R1A1100.jpg') center/cover no-repeat;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    margin-bottom:-60px;
+    animation: zoomIn 1.2s ease forwards;
+    z-index:2;
+}
+
+/* কার্ড */
+.card{
+    background:white;
+    width:90%;
+    max-width:400px;
+    padding:80px 20px 20px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    text-align:center;
+    animation: slideUp 1s ease forwards;
+}
+
+/* নিচের কার্ড */
+.card.second{
+    margin-top:40px;
+    animation-delay:0.8s;
+}
+
+/* লক্ষ্য কার্ড */
+.card.highlight{
+    margin-top:40px;
+    background:linear-gradient(135deg,#ffecd2,#fcb69f);
+    animation-delay:0.3s;
+}
+
+/* Favorite Thing */
+.card.third{
+    margin-top:30px;
+    background:linear-gradient(135deg,#c3cfe2,#f5f7fa);
+    animation-delay:0.5s;
+    padding:30px;
+}
+
+.highlight p,
+.rahii .tag{
+    background:#ffffffaa;
+    padding:8px;
+    border-radius:10px;
+    margin:8px 5px;
+    font-weight:bold;
+    color:#444;
+}
+
+h1, h2{
+    color:#764ba2;
+}
+
+p{
+    margin:6px 0;
+    font-size:16px;
+}
+
+.tag{
+    display:inline-block;
+    background:#667eea;
+    color:white;
+    padding:6px 14px;
+    border-radius:20px;
+}
+
+footer{
+    margin-top:12px;
+    color:#666;
+}
+
+button{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    border-radius:25px;
+    background:#667eea;
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+}
+
+.link-card{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* এনিমেশন */
+@keyframes slideUp{
+    from{
+        transform:translateY(60px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+@keyframes zoomIn{
+    from{
+        transform:scale(0);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- 🔵 গোলাকার ছবি -->
+    <div class="profile-pic"></div>
+
+    <!-- প্রথম বক্স -->
+    <div class="card">
+        <h2>স্বাগতম</h2>
+        <h1>আমার পরিচয়</h1>
+        <p><b>নাম:</b> রাহিনুর রেজা আসিফ</p>
+        <p><b>মাদ্রাসা:</b> শাহজালাল জামেয়া ইসলামিয়া কামিল মাদ্রাসা</p>
+        <p><b>শ্রেণি:</b> আলিম ১ম বর্ষ</p>
+        <p><b>শাখা:</b> A</p>
+        <p><b>রোল:</b> ৭৮</p>
+        <footer>HSC 27 Batch</footer>
+    </div>
+
+    <!-- দ্বিতীয় বক্স -->
+    <div class="card highlight">
+        <h2>✨ আমার লক্ষ্য</h2>
+        <div class="highlight">
+            <p>📚 নিয়মিত পড়াশোনা</p>
+            <p>💻 ওয়েব ডেভেলপমেন্ট শেখা</p>
+            <p>⚽ খেলাধুলা ও ফিটনেস</p>
+            <p>🌟 নিজের স্বপ্ন পূরণ</p>
+        </div>
+    </div>
+
+    <!-- তৃতীয় বক্স -->
+    <div class="card third">
+        <h2>Favorite Thing</h2>
+        <div class="rahii">
+            <div class="tag">Lionel Messi</div>
+            <div class="tag">Anime</div>
+            <div class="tag">Barcelona</div>
+            <div class="tag">Sylhet Titans</div>
+        </div>
+    </div>
+
+    <!-- চতুর্থ বক্স -->
+    <div class="card second">
+        <a href="second.html" class="link-card">
+            <h2>সাথে থাকার জন্য অসংখ্য ধন্যবাদ</h2>
+            <p>এটা প্রথম পেইজ</p>
+            <p>দ্বিতীয় পেইজে যেতে চাইলে এখানে ক্লিক করুন</p>
+        </a>
+        <button onclick="goNext()">দ্বিতীয় পেইজে যান →</button>
+    </div>
+
+</div>
+
+<script>
+function goNext(){
+    window.location.href = "second.html";
+}
+</script>
+
+</body>
+</html>
